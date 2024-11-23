@@ -1,6 +1,7 @@
-import { Pixel, ppmHeader } from './settings';
+import { Color } from './index';
+import { ppmHeader } from './settings';
 
-export function createPpmFile(pixels: Pixel[][]): string {
+export function createPpmFile(pixels: Color[][]): string {
   let result = ppmHeader + '\n';
 
   for (let j = 0; j < pixels.length; j++) {
@@ -14,6 +15,6 @@ export function createPpmFile(pixels: Pixel[][]): string {
   return result;
 }
 
-export function pixelToString(pixel: Pixel) {
-  return `${pixel.r} ${pixel.g} ${pixel.b}`;
+export function pixelToString(color: Color) {
+  return `${color.r} ${color.g} ${color.b}`;
 }

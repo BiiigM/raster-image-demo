@@ -1,6 +1,7 @@
-import { maxPixelColor, Pixel, screenHeight, screenWidth } from './settings';
+import { maxPixelColor, screenHeight, screenWidth } from './settings';
+import { Color } from './index';
 
-export function createGradiant(pixels: Pixel[][]) {
+export function createGradiant(pixels: Color[][]) {
   for (let j = 0; j < pixels.length; j++) {
     let pixelColum = pixels[j];
     for (let i = 0; i < pixelColum.length; i++) {
