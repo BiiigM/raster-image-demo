@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { screenHeight, screenWidth } from './settings';
+import { outputDir, screenHeight, screenWidth } from './settings';
 import { createGradiant } from './gradiant';
 import { createPpmFile } from './ppmUtils';
 import {
@@ -26,6 +26,11 @@ let pixels: Color[][] = new Array(screenHeight).fill(undefined).map(() =>
     return { r: 255, g: 255, b: 255 };
   }),
 );
+
+// create Folder if not existing
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir);
+}
 
 // modifie pixels
 // drawLine({ x: 0, y: 0 }, { x: 10, y: 0 }, pixels);

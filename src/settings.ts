@@ -4,3 +4,4 @@ export const maxPixelColor = 255;
 export const ppmHeader = `P3
 ${screenWidth} ${screenHeight}
 ${maxPixelColor}`;
+export const outputDir = './.out';
