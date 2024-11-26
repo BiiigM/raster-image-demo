@@ -60,7 +60,7 @@ export function drawLineBresenhamDirction(
   if (Math.abs(pixel2.x - pixel1.x) > Math.abs(pixel2.y - pixel1.y)) {
     drawLineBresenhamH(pixel1, pixel2, pixels);
   } else {
-    drawLineBresenhamH(pixel1, pixel2, pixels);
+    drawLineBresenhamV(pixel1, pixel2, pixels);
   }
 }
 
