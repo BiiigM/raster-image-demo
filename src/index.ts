@@ -8,6 +8,7 @@ import {
   drawLineBresenhamDirction,
   drawLineDirection,
 } from './drawLineUtils';
+import { drawCircle } from './drawCircleUtils';
 
 // init data structurs
 export type Pixel = {
@@ -41,7 +42,8 @@ if (!fs.existsSync(outputDir)) {
 // drawLineDirection({ x: 2, y: 13 }, { x: 2, y: 2 }, pixels);
 // drawLine({ x: 0, y: 0 }, { x: 7, y: 4 }, pixels);
 
-drawLineBresenhamDirction({ x: 2, y: 2 }, { x: 13, y: 5 }, pixels);
+// drawLineBresenhamDirction({ x: 2, y: 2 }, { x: 13, y: 5 }, pixels);
+drawCircle({ x: 32, y: 32 }, 23, pixels);
 
 // creating ppm file
 fs.writeFileSync('.out/image.ppm', createPpmFile(pixels));
